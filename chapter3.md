@@ -466,3 +466,52 @@ success_msg("Hästi! Siin ülesandes pidi `dcast` funktsioonis argumentide `fun.
 
 
 
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:5339522351
+## Andmestiku pööramine
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+arstiabita <- read.table("http://math.ut.ee/~annes/R/eisaanud-arstiabi.txt", sep = "\t", dec = ",", header = T, check.names = FALSE)
+library(reshape2)
+
+```
+
+*** =sample_code
+```{r}
+# Ülesanne 1: prindi andmestik ekraanile
+___________
+
+# Ülesanne 2: vii andmestik sobivalt pikale kujule
+pikk <- melt(arstiabita, variable.name = ___________________)
+
+# Ülesanne 3: teisenda pikk andmstik laiaks nii, et tulemuseks on pööratud andmestik
+transponeetirud <- dcast(pikk, _______________________)
+
+
+```
+
+
+*** =solution
+```{r}
+# Ülesanne 1: prindi andmestik ekraanile
+arstiabita
+
+# Ülesanne 2: vii andmestik sobivalt pikale kujule
+pikk <- melt(arstiabita, variable.name = "Aasta")
+
+# Ülesanne 3: teisenda pikk andmstik laiaks nii, et tulemuseks on pööratud andmestik
+transponeetirud <- dcast(pikk, Aasta ~ Arstiabiliik)
+
+```
+
+*** =sct
+```{r}
+
+```
