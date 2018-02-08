@@ -472,24 +472,36 @@ success_msg("Hästi! Siin ülesandes pidi `dcast` funktsioonis argumentide `fun.
 
 Kasutades teisendusi pika ja laia kuju vahel saab läbi viia ka andmetabeli pööramist ehk transponeerimist. Sellist tabeli ridade ja veergude vahetust võib vaja minna sel juhul kui tegu on juba mingi koondandmete tabeliga.
 
-Näiteks kui on tegu sagedustabeliga, kus on kirjas eri aastatel 
+Näiteks kui on tegu tabeliga, kus on kirjas keskmine brutotunnitasu (eurot) vanusgruppides kahel eri aastal:
 
-<!-- PA640 tabel statistikaamet -->
+<!-- PA640 tabel statistikaamet,  Täis- ja osalise tööajaga töötajate keskmine brutotunnitasu soo, vanuserühma ja ametiala pearühma järgi, oktoober -->
 
-        | 2010 | 2014|
----------|--------|---------
-Alla 30	 |	4,55 |	5,40 
-30-39	|	5,49 |	6,52 
-40-49	|	4,94 |	6,01 
-50-59	|	4,35 |	5,16 
-60 ja vanemad|		4,00| 	4,72 
+| vanusgrupp  | 2010   | 2014|
+|---------|--------|---------|
+|Alla 30	 |	4,55 |	5,40 |
+|30-39	|	5,49 |	6,52 |
+|40-49	|	4,94 |	6,01 |
+|50-59	|	4,35 |	5,16 |
+|60 ja vanemad|		4,00| 	4,72 |
 
+Siis pööratud tabelis oleks aastad ridadeks ja vanusgrupid veergudeks:
+
+|Aasta|	Alla 30|  30-39| 40-49	|50-59	|60 ja vanemad|
+|-----|--------|-------|--------|-------|-------------|
+|2010	|4,55 |	5,49| 	4,94|	4,35| 4,00 |
+|2014	|5,40 |	6,52|	6,01|   5,16| 4,72 |
+
+
+Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on antud tabeli pööramine.
  
+
+
+
 
 *** =instructions
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
 - **Ülesanne 2** Vii andmestik pikale kujule, tunnusele, mis hakkab sisaldama vanu veerunimesid pane nimeks `Aasta`.
-- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue admestiku ridades oleks ühe aasta tulemused erineva astiabi liikide kohta.
+- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridades oleks ühe aasta tulemused erineva astiabi liikide kohta.
 
 *** =hint
 
