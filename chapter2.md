@@ -134,7 +134,7 @@ success_msg("Tubli!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:253fd59b42
 ##  Andmestiku sorteerimine 1
 
-Töölaual on andmestik `iris`.
+Töölaual on andmestik `iris`. Andmestik tuleb erinevate tunnuste järgi kasvavalt sorteerida.
 
 
 *** =instructions
@@ -219,12 +219,12 @@ success_msg("Hästi!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:90c0772430
 ##  Andmestiku sorteerimine 2
 
-Töölaual on andmestik `iris`.
+Töölaual on andmestik `iris`. Siin ülesandes tuleb kombineerida kasvavalt ja kahanevalt sorteerimist.
 
 
 
 *** =instructions
-- **Ülesanne 1** Järjesta andmestik `iris`  nii, et vaatlused oleks tunnuse `Sepal.Width` järgi järjestatud ksavavalt ning need vaatlused, mil on kroonlehe laius sama, oleksid tunnuse `Sepal.Length` järgi järjestatud kahanevasse järjestusse. Omista sorteeritud andmestik muutujale `iris.sort2`. 
+- **Ülesanne 1** Järjesta andmestik `iris`  nii, et vaatlused oleks tunnuse `Sepal.Width` järgi järjestatud kasvavalt ning need vaatlused, mil on kroonlehe laius sama, oleksid tunnuse `Sepal.Length` järgi järjestatud kahanevasse järjestusse. Omista sorteeritud andmestik muutujale `iris.sort2`. 
 - **Ülesanne 3** Mis sorti iiris on sorteeritud andmestikus 30 kohal? Omista selle sordi nimi muutujale `kolmekymnes`.
 
 *** =hint
