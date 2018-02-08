@@ -470,7 +470,7 @@ success_msg("Hästi! Siin ülesandes pidi `dcast` funktsioonis argumentide `fun.
 --- type:NormalExercise lang:r xp:100 skills:1 key:5339522351
 ## Andmestiku pööramine
 
-
+ 
 
 *** =instructions
 
@@ -492,7 +492,7 @@ ___________
 pikk <- melt(arstiabita, variable.name = ___________________)
 
 # Ülesanne 3: teisenda pikk andmstik laiaks nii, et tulemuseks on pööratud andmestik
-transponeetirud <- dcast(pikk, _______________________)
+transponeeritud <- dcast(pikk, _______________________)
 
 
 ```
@@ -507,7 +507,7 @@ arstiabita
 pikk <- melt(arstiabita, variable.name = "Aasta")
 
 # Ülesanne 3: teisenda pikk andmstik laiaks nii, et tulemuseks on pööratud andmestik
-transponeetirud <- dcast(pikk, Aasta ~ Arstiabiliik)
+transponeeritud <- dcast(pikk, Aasta ~ Arstiabiliik)
 
 ```
 
