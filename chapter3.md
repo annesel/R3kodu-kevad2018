@@ -468,11 +468,28 @@ success_msg("Hästi! Siin ülesandes pidi `dcast` funktsioonis argumentide `fun.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:5339522351
-## Andmestiku pööramine
+## Tabeli pööramine
+
+Kasutades teisendusi pika ja laia kuju vahel saab läbi viia ka andmetabeli pööramist ehk transponeerimist. Sellist tabeli ridade ja veergude vahetust võib vaja minna sel juhul kui tegu on juba mingi koondandmete tabeliga.
+
+Näiteks kui on tegu sagedustabeliga, kus on kirjas eri aastatel 
+
+<!-- PA640 tabel statistikaamet -->
+
+        | 2010 | 2014|
+---------|--------|---------
+Alla 30	 |	4,55 |	5,40 
+30-39	|	5,49 |	6,52 
+40-49	|	4,94 |	6,01 
+50-59	|	4,35 |	5,16 
+60 ja vanemad|		4,00| 	4,72 
 
  
 
 *** =instructions
+- **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
+- **Ülesanne 2** Vii andmestik pikale kujule, tunnusele, mis hakkab sisaldama vanu veerunimesid pane nimeks `Aasta`.
+- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue admestiku ridades oleks ühe aasta tulemused erineva astiabi liikide kohta.
 
 *** =hint
 
@@ -491,9 +508,9 @@ ___________
 # Ülesanne 2: vii andmestik sobivalt pikale kujule
 pikk <- melt(arstiabita, variable.name = ___________________)
 
-# Ülesanne 3: teisenda pikk andmstik laiaks nii, et tulemuseks on pööratud andmestik
-transponeeritud <- dcast(pikk, _______________________)
-
+# Ülesanne 3: teisenda pikk andmestik laiaks nii, et tulemuseks on pööratud andmestik. Prindi tulemus ekraanile
+transponeeritud <- dcast(pikk, __________~___________)
+___________
 
 ```
 
@@ -506,9 +523,9 @@ arstiabita
 # Ülesanne 2: vii andmestik sobivalt pikale kujule
 pikk <- melt(arstiabita, variable.name = "Aasta")
 
-# Ülesanne 3: teisenda pikk andmstik laiaks nii, et tulemuseks on pööratud andmestik
+# Ülesanne 3: teisenda pikk andmestik laiaks nii, et tulemuseks on pööratud andmestik. Prindi tulemus ekraanile
 transponeeritud <- dcast(pikk, Aasta ~ Arstiabiliik)
-
+transponeeritud
 ```
 
 *** =sct
