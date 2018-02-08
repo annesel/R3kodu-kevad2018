@@ -115,7 +115,7 @@ Töölaual on andmestik `rotid`. Rotid on jagatud 3 gruppi, iga grupp sai erinev
 *** =instructions
 - **Ülesanne 1** Aktiveeri pakett `reshape2`.
 - **Ülesanne 2** Kasutades käsku `dcast` vii andmestik `rotid` sellisele kujule, et iga roti kaalumõõtmised oleksid ühes reas, koos roti identifikaatori(`Rat`) ja söödatüübiga (`Diet`). Omista uus andmestik muutujale `rotid.lai`. 
-- **Ülesanne 3** Prindi uus andmestik ekraanile.
+- **Ülesanne 3** Prindi uus andmestik ekraanile. Pane tähele, et tabelis on tühikuväärtused `NA`.
 
 
 
@@ -483,14 +483,17 @@ Näiteks kui on tegu tabeliga, kus on kirjas keskmine brutotunnitasu (eurot) van
 |40-49	|	4,94 |	6,01 |
 |50-59	|	4,35 |	5,16 |
 |60 ja vanemad|		4,00| 	4,72 |
+\
 
 Siis pööratud tabelis oleks aastad ridadeks ja vanusgrupid veergudeks:
+
 
 |Aasta|	Alla 30|  30-39| 40-49	|50-59	|60 ja vanemad|
 |-----|--------|-------|--------|-------|-------------|
 |2010	|4,55 |	5,49| 	4,94|	4,35| 4,00 |
 |2014	|5,40 |	6,52|	6,01|   5,16| 4,72 |
 
+\
 
 Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on antud tabeli pööramine.
  
@@ -500,8 +503,8 @@ Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mit
 
 *** =instructions
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Vii andmestik pikale kujule, tunnusele, mis hakkab sisaldama vanu veerunimesid pane nimeks `Aasta`.
-- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridades oleks ühe aasta tulemused erineva astiabi liikide kohta.
+- **Ülesanne 2** Vii andmestik pikale kujule. Tunnusele, mis hakkab sisaldama vanu veerunimesid pane nimeks `Aasta`. Ära teisi käsu argumente täpsusta.
+- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate astiabiliikide kohta.
 
 *** =hint
 
@@ -519,6 +522,7 @@ ___________
 
 # Ülesanne 2: vii andmestik sobivalt pikale kujule
 pikk <- melt(arstiabita, variable.name = ___________________)
+pikk
 
 # Ülesanne 3: teisenda pikk andmestik laiaks nii, et tulemuseks on pööratud andmestik. Prindi tulemus ekraanile
 transponeeritud <- dcast(pikk, __________~___________)
