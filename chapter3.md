@@ -615,7 +615,7 @@ Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiab
 
 *** =instructions
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Pööra andmestik nagu eelmises ülesandes, aga nüüd käsuga `recast`. Käsus tuleb määrata kaks argumenti. Vaata tulemust.
+- **Ülesanne 2** Pööra andmestik nagu eelmises ülesandes, aga nüüd käsuga `recast`. Käsus tuleb määrata kaks argumenti. Prindi tulemus ekraanile. 
 
 
 *** =hint
@@ -676,6 +676,6 @@ test_output_contains("transponeeritud", incorrect_msg = "Lõpptulemus, andmetabe
 
 
 
-success_msg("Hästi! Kolmas kodutöö on tehtud!")
+success_msg("Tubli! Kolmas kodutöö on tehtud!")
 
 ```
