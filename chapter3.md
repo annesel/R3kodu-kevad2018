@@ -559,6 +559,36 @@ transponeeritud
 # 1
 test_output_contains("arstiabita", incorrect_msg = "Esimeses ülesandes on vaadeldav andmetabel `arstiabita`  ekraanile printimata.")
 
+# 2
+test_function(name = "melt", 
+              args = c("data", "variable.name"),
+              index = 1,
+              eq_condition = "equivalent",
+              not_called_msg = "Teises ülesandes pead kasutama funktsiooni `melt`.",
+              args_not_specified_msg = paste("Käsule `melt` läheb " , 
+                                             c("esimeseks argumendiks andmestiku nimi",
+                                               "teiseks argumendiks  `variable.name`,  millega määrata ühe uue tunnuse nimi")),
+              incorrect_msg =   paste("Käsus `melt` on  " , 
+                                      c("vale andmestik",
+                                        "`variable.name` argumendi väärtus vale.")))
+test_output_contains("pikk", incorrect_msg = "Tekitatud andmetabel `pikk` on ekraanile printimata.")
+
+
+#3
+test_function(name = "dcast", 
+              args = c("data", "formula"),
+              index = 1,
+              eq_condition = "equivalent",
+              not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `dcast`.",
+              args_not_specified_msg = paste("Käsku `dcast` läheb " , 
+                                             c("esimeseks argumendiks andmestiku nimi",
+                                               "üheks argumendiks  `formula` ehk valem mille kaudu saab määrata rea ja veertunnused.")),
+              incorrect_msg =   paste("Käsus `dcast` on  ", 
+                                      c("vale andmestik",
+                                        "`formula` argumendi väärtus vale.")))
+
+test_output_contains("transponeeritud", incorrect_msg = "Lõpptulemus, andmetabel `transponeeritud` on ekraanile printimata.")
+
 
 
 success_msg("Hästi! Nüüd tuleb viimane ülesanne.")
@@ -575,7 +605,7 @@ success_msg("Hästi! Nüüd tuleb viimane ülesanne.")
 --- type:NormalExercise lang:r xp:100 skills:1 key:33f253175d
 ## Tabeli pööramine ühe sammuga 
  
-Eelmises ülesandes vaadatud tabeli pööramise, mis oli läbi viidud kahe sammuna: esmalt tabel pikale kujule käsuga `melt` ja siis laiale kujule käsuga `dcast` saab läbi viia ka ühe käsuga. Käsk `recast` võimaldab kombineerida järjestikused pikk -> lai teisendused.  Enne ülesadne lahendamist vaata käsu abilehte `?recast`.
+Eelmises ülesandes vaadatud tabeli pööramise, mis oli läbi viidud kahe sammuna: esmalt tabel pikale kujule käsuga `melt` ja siis laiale kujule käsuga `dcast` saab läbi viia ka ühe käsuga. Käsk `recast` võimaldab kombineerida järjestikused pikk -> lai teisendused.  Enne ülesande lahendamist vaata käsu abilehte `?recast`.
  
 Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on jälle antud tabeli pööramine, aga nüüd ühe käsu abil.
  
@@ -585,10 +615,12 @@ Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiab
 
 *** =instructions
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Pööra andmestik nagu eelmsies ülesadnes, aga nüüd käsuga `recast`. Vaata tulemust.
+- **Ülesanne 2** Pööra andmestik nagu eelmises ülesandes, aga nüüd käsuga `recast`. Käsus tuleb määrata kaks argumenti. Vaata tulemust.
+
 
 *** =hint
-- Käsu `recast` argumendid võid võtta eelmise ülesande lahendusest st pane nüüd ühte käsku kokku varasemad `melt` ja `dcast` arguemndid.
+- Käsus `recast` on praegu oluline ära määrata teisendatav andmestik ja ridade-veergude valem, ehk argument `formula`. 
+- Kuna pikaks teisendamise sammul läheb vanu tunnusenimesid hoidev veerg nime `variables` alla, siis valem peaks olema kujul `variables ~ Arstiabiliik`
 
 
 *** =pre_exercise_code
@@ -616,7 +648,7 @@ ___________
 arstiabita
 
 # Ülesanne 2: pööra andmestik. Prindi tulemus ekraanile
-transponeeritud <- recast(arstiabita, variable.name = "Aasta", Aasta ~ Arstiabiliik)
+transponeeritud <- recast(data = arstiabita,  formula = variables ~ Arstiabiliik)
 transponeeritud
 ```
 
@@ -629,17 +661,15 @@ test_output_contains("arstiabita", incorrect_msg = "Esimeses ülesandes on vaade
 
 # 2
 test_function(name = "recast", 
-              args = c("data", "variable.name", "formula"),
+              args = c("data", "formula"),
               index = 1,
               eq_condition = "equivalent",
               not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `recast`.",
               args_not_specified_msg = paste("Käsku `recast` läheb " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                             "üheks argumendiks  `variable.name`, mille kaudu saab määrata uue tunnuse, mis hakkab sisaldama aastanumbreid, nime.", 
-                                               "üheks argumendiks  `formula`, mille kaudu saab määrata nö rea ja veertunnused.")),
+                                               "teiseks argumendiks  `formula`, mille kaudu saab määrata   rea ja veertunnused.")),
               incorrect_msg =   paste("Käsus `recast` on  ", 
                                       c("vale andmestik",
-                                      "`variable.name` argumendi väärtus vale.",
                                         "`formula` argumendi väärtus vale.")))
 
 test_output_contains("transponeeritud", incorrect_msg = "Lõpptulemus, andmetabel `transponeeritud` on ekraanile printimata.")
