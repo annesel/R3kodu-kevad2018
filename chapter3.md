@@ -605,7 +605,7 @@ success_msg("Hästi! Nüüd tuleb viimane ülesanne.")
 --- type:NormalExercise lang:r xp:100 skills:1 key:33f253175d
 ## Tabeli pööramine ühe sammuga 
  
-Eelmises ülesandes vaadatud tabeli pööramise, mis oli läbi viidud kahe sammuna: esmalt tabel pikale kujule käsuga `melt` ja siis laiale kujule käsuga `dcast` saab läbi viia ka ühe käsuga. Käsk `recast` võimaldab kombineerida järjestikused pikk -> lai teisendused.  Enne ülesande lahendamist vaata käsu abilehte `?recast`.
+Eelmises ülesandes vaadatud tabeli pööramise, mis oli läbi viidud kahe sammuna: esmalt tabel pikale kujule käsuga `melt` ja siis laiale kujule käsuga `dcast`, saab läbi viia ka ühe käsuga. Käsk `recast` võimaldab kombineerida järjestikused pikk -> lai teisendused.  Enne ülesande lahendamist vaata käsu abilehte `?recast`.
  
 Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on jälle antud tabeli pööramine, aga nüüd ühe käsu abil.
  
@@ -620,7 +620,7 @@ Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiab
 
 *** =hint
 - Käsus `recast` on praegu oluline ära määrata teisendatav andmestik ja ridade-veergude valem, ehk argument `formula`. 
-- Kuna pikaks teisendamise sammul läheb vanu tunnusenimesid hoidev veerg nime `variable` alla, siis valem peaks olema kujul `variable ~ Arstiabiliik`
+- Kuna pikaks teisendamise sammul läheb vanu tunnusenimesid hoidev veerg vaikimisi nime `variable` alla, siis valem peaks olema kujul `variable ~ Arstiabiliik`
 
 
 *** =pre_exercise_code
