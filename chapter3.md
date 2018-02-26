@@ -559,36 +559,6 @@ transponeeritud
 # 1
 test_output_contains("arstiabita", incorrect_msg = "Esimeses ülesandes on vaadeldav andmetabel `arstiabita`  ekraanile printimata.")
 
-# 2
-test_function(name = "melt", 
-              args = c("data", "variable.name"),
-              index = 1,
-              eq_condition = "equivalent",
-              not_called_msg = "Teises ülesandes pead kasutama funktsiooni `melt`.",
-              args_not_specified_msg = paste("Käsule `melt` läheb " , 
-                                             c("esimeseks argumendiks andmestiku nimi",
-                                               "teiseks argumendiks  `variable.name`,  millega määrata ühe uue tunnuse nimi")),
-              incorrect_msg =   paste("Käsus `melt` on  " , 
-                                      c("vale andmestik",
-                                        "`variable.name` argumendi väärtus vale.")))
-test_output_contains("pikk", incorrect_msg = "Tekitatud andmetabel `pikk` on ekraanile printimata.")
-
-
-#3
-test_function(name = "dcast", 
-              args = c("data", "formula"),
-              index = 1,
-              eq_condition = "equivalent",
-              not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `dcast`.",
-              args_not_specified_msg = paste("Käsku `dcast` läheb " , 
-                                             c("esimeseks argumendiks andmestiku nimi",
-                                               "üheks argumendiks  `formula`, valem mille kaudu saab määrata nö rea ja veertunnused.")),
-              incorrect_msg =   paste("Käsus `dcast` on  ", 
-                                      c("vale andmestik",
-                                        "`formula` argumendi väärtus vale.")))
-
-test_output_contains("transponeeritud", incorrect_msg = "Lõpptulemus, andmetabel `transponeeritud` on ekraanile printimata.")
-
 
 
 success_msg("Hästi! Nüüd tuleb viimane ülesanne.")
