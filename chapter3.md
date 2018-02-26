@@ -650,6 +650,7 @@ transponeeritud <- recast(arstiabita, variable.name = "Aasta", Aasta ~ Arstiabil
 transponeeritud
 ```
 
+
 *** =sct
 ```{r}
 
@@ -676,12 +677,5 @@ test_output_contains("transponeeritud", incorrect_msg = "Lõpptulemus, andmetabe
 
 
 success_msg("Hästi! Kolmas kodutöö on tehtud!")
-
-
-
-
-
-
-
 
 ```
