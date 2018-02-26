@@ -582,7 +582,7 @@ test_function(name = "dcast",
               not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `dcast`.",
               args_not_specified_msg = paste("Käsku `dcast` läheb " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                               "üheks argumendiks  `formula`, mille kaudu saab määrata nö rea ja veertunnused.")),
+                                               "üheks argumendiks  `formula`, valem mille kaudu saab määrata nö rea ja veertunnused.")),
               incorrect_msg =   paste("Käsus `dcast` on  ", 
                                       c("vale andmestik",
                                         "`formula` argumendi väärtus vale.")))
