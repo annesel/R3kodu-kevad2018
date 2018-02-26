@@ -11,7 +11,7 @@ Töölaual on olemas andmestik `B`. Andmestikus on 160 inimese kohta mitmete tes
 
 *** =instructions
 - **Ülesanne 1** Aktiveeri pakett `reshape2`.
-- **Ülesanne 2** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida. Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifiakaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
+- **Ülesanne 2** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifiakaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
 - **Ülesanne 3** Vaata uue andmestiku struktuuri käsuga `str`.
 
 *** =hint
@@ -32,8 +32,11 @@ str(B)
 ______(reshape2)
 
 
-# ÜLesanne 2: vii andmestik pikale kujule
+# Ülesanne 2: vii andmestik pikale kujule
 testid.pikk <- melt(_______________________)
+
+
+# Ülesanne 3: vaata andmestiku struktuuri
 _____(testid.pikk)
 
 
@@ -50,6 +53,9 @@ library(reshape2)
 
 # ÜLesanne 2: vii andmestik pikale kujule
 testid.pikk <- melt(B, measure.vars = 3:42, id.vars = 1)
+
+
+# Ülesanne 3: vaata andmestiku struktuuri
 str(testid.pikk)
 
 
@@ -121,7 +127,7 @@ Töölaual on andmestik `rotid`. Rotid on jagatud 3 gruppi, iga grupp sai erinev
 
 *** =hint
 - Käsus `dcast` on argument `value.var`, mille abil saab ette anda selle tunnuse nime, mille väärtuseid kasutatakse ridade täitmisel.
-- Käsus `dcast` on ridade-veergude paigutus määratud: `formula = Rat + Diet ~ Time` kaudu.
+- Käsus `dcast` peaks ridade-veergude paigutuse määrama valemi: `formula = Rat + Diet ~ Time` kaudu.
 
 *** =pre_exercise_code
 ```{r}
@@ -503,10 +509,12 @@ Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mit
 
 *** =instructions
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Vii andmestik pikale kujule. Tunnusele, mis hakkab sisaldama vanu veerunimesid pane nimeks `Aasta`. Ära teisi käsu argumente täpsusta.
-- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate astiabiliikide kohta.
+- **Ülesanne 2** Vii andmestik esmalt pikale kujule käsuga `melt`. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu argumente täpsusta.
+- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate astiabiliikide kohta. Vaata tulemust.
 
 *** =hint
+- Käsus `dcast` peaks ridade-veergude valem olema kujul `Aasta ~ Arstiabiliik`.
+
 
 *** =pre_exercise_code
 ```{r}
@@ -520,7 +528,7 @@ library(reshape2)
 # Ülesanne 1: prindi andmestik ekraanile
 ___________
 
-# Ülesanne 2: vii andmestik sobivalt pikale kujule
+# Ülesanne 2: vii andmestik pikale kujule, vaata tulemust
 pikk <- melt(arstiabita, variable.name = ___________________)
 pikk
 
@@ -536,7 +544,7 @@ ___________
 # Ülesanne 1: prindi andmestik ekraanile
 arstiabita
 
-# Ülesanne 2: vii andmestik sobivalt pikale kujule
+# Ülesanne 2: vii andmestik pikale kujule, vaata tulemust
 pikk <- melt(arstiabita, variable.name = "Aasta")
 
 # Ülesanne 3: teisenda pikk andmestik laiaks nii, et tulemuseks on pööratud andmestik. Prindi tulemus ekraanile

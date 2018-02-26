@@ -132,7 +132,7 @@ success_msg("Tubli!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:253fd59b42
-##  Andmestiku sorteerimine 1
+##  Andmestiku sorteerimine kasvavalt
 
 Töölaual on andmestik `iris`. Andmestik tuleb erinevate tunnuste järgi kasvavalt sorteerida.
 
@@ -217,7 +217,7 @@ success_msg("Hästi!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:90c0772430
-##  Andmestiku sorteerimine 2
+##  Andmestiku sorteerimine 
 
 Töölaual on andmestik `iris`. Siin ülesandes tuleb kombineerida kasvavalt ja kahanevalt sorteerimist.
 
@@ -229,7 +229,7 @@ Töölaual on andmestik `iris`. Siin ülesandes tuleb kombineerida kasvavalt ja 
 
 *** =hint
 - Kui andmestikku on vaja sorteerida ühe tunnuse järgi kasvavalt ja teise järgi kahanevalt, siis saad `order` käsus lisada miinusmärgi selle tunnuse nime ette, mille järgi tuleb sorteerida kahanevalt (tingimusel, et `decreasing = FALSE`). See abinõu sobib aga ainult siis kui tegu on arvtunnustega!
-- Kolmekymnenda vaatluse nägemiseks: `iris.sort2[30,]`
+- Kolmekümnenda vaatluse nägemiseks: `iris.sort2[30,]`
 
 
 *** =pre_exercise_code
