@@ -509,7 +509,7 @@ Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mit
 
 *** =instructions
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Vii andmestik esmalt pikale kujule käsuga `melt`. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu argumente täpsusta.
+- **Ülesanne 2** Vii andmestik esmalt pikale kujule käsuga `melt`. ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu argumente täpsusta.
 - **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate astiabiliikide kohta. Vaata tulemust.
 
 *** =hint
@@ -554,5 +554,25 @@ transponeeritud
 
 *** =sct
 ```{r}
+
+# 1
+test_output_contains("arstiabita", incorrect_msg = "Esimeses ülesandes on vaadeldav andmetabel `arstiabita`  ekraanile printimata.")
+
+# 2
+test_function(name = "melt", 
+              args = c("data", "variable.name"),
+              index = 1,
+              eq_condition = "equivalent",
+              not_called_msg = "Teises ülesandes pead kasutama funktsiooni `melt`.",
+              args_not_specified_msg = paste("Käsule `melt` läheb " , 
+                                             c("esimeseks argumendiks andmestiku nimi",
+                                               "teiseks argumendiks  `variable.name`,  millega määrata ühe uue tunnuse nimi")),
+              incorrect_msg =   paste("Käsus `melt` on  " , 
+                                      c("vale andmestik",
+                                        "`variable.name` argumendi väärtus vale.")))
+
+
+
+
 
 ```
