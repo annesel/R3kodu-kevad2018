@@ -620,7 +620,7 @@ Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiab
 
 *** =hint
 - Käsus `recast` on praegu oluline ära määrata teisendatav andmestik ja ridade-veergude valem, ehk argument `formula`. 
-- Kuna pikaks teisendamise sammul läheb vanu tunnusenimesid hoidev veerg nime `variables` alla, siis valem peaks olema kujul `variables ~ Arstiabiliik`
+- Kuna pikaks teisendamise sammul läheb vanu tunnusenimesid hoidev veerg nime `variable` alla, siis valem peaks olema kujul `variable ~ Arstiabiliik`
 
 
 *** =pre_exercise_code
@@ -648,7 +648,7 @@ ___________
 arstiabita
 
 # Ülesanne 2: pööra andmestik. Prindi tulemus ekraanile
-transponeeritud <- recast(data = arstiabita,  formula = variables ~ Arstiabiliik)
+transponeeritud <- recast(data = arstiabita,  formula = variable ~ Arstiabiliik)
 transponeeritud
 ```
 
