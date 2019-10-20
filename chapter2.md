@@ -1,9 +1,17 @@
 ---
-title       : Andmestiku sorteerimine
-description : Sorteerimine
+title: 'Andmestiku sorteerimine'
+description: Sorteerimine
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d54982584e
 ## Sorteerimine
+
+```yaml
+type: NormalExercise
+key: d54982584e
+lang: r
+xp: 100
+skills: 1
+```
 
 Ühe vektori väärtuste sorteerimiseks saab kasutada käsku `sort`, käsk annab tulemuseks järjestatud väärtused.
 
@@ -16,25 +24,22 @@ kus elemendid on esmalt järjestatud `x` järgi, kui mingid `x` väärtused lang
 
 Töölaual on vektorid `x` ja `y` ning andmestik `xy`.
 
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Sorteeri andmestik `xy` kasvavalt `x` ja `y` järgi, kasuta selleks `order` käsku. Omista sorteeritud andmestik muuutujale `xy1`, prindi ekraanile.
 - **Ülesanne 2** Moodusta andmestik `xy2`, selleks anna andmestikule `xy` ridade järjestus ette käsuga `order(x, -y)`. Prindi tulemus ekraanile.
-- **Ülesanne 3** Võrdle kahte tulemust, milles seisneb erinevus? 
+- **Ülesanne 3** Võrdle kahte tulemust, milles seisneb erinevus?
 
-
-*** =hint
+`@hint`
 - Andmestiku sorteerimiseks määra `order` käsu tulemuse abil andmestiku ridade järejstus: `andmestik[order(x, y),]`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 x <- c(2:1, 2:1, 2:1, 4)
 y <- c(7, 1, 5, 2, 6, 3, 4)
 xy <- data.frame(x, y)
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Vaata vektorite x, y ja andmestiku xy sisu
 x; y; xy
@@ -53,7 +58,7 @@ xy2
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Vaata vektorite x, y ja andmestiku xy sisu
 x; y; xy
@@ -74,7 +79,7 @@ xy2
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_predefined_objects("x", 
                         eq_condition = "equivalent",
@@ -124,35 +129,34 @@ success_msg("Tubli!")
 
 ```
 
+---
 
+## Andmestiku sorteerimine kasvavalt
 
-
-
-
-
-
---- type:NormalExercise lang:r xp:100 skills:1 key:253fd59b42
-##  Andmestiku sorteerimine kasvavalt
+```yaml
+type: NormalExercise
+key: 253fd59b42
+lang: r
+xp: 100
+skills: 1
+```
 
 Töölaual on andmestik `iris`. Andmestik tuleb erinevate tunnuste järgi kasvavalt sorteerida.
 
-
-*** =instructions
-
+`@instructions`
 - **Ülesanne 1** Järjesta andmestik `iris` kasvavasse järjestusse tunnuste `Sepal.Width`, `Sepal.Length` ja `Petal.Width` järgi.  Omista tulemus muutujale `iris.sort1`.
 - **Ülesanne 2** Mis sorti iiris on eelviimasel kohal? Omista sordi nimi muuutujale `eelviimane`.
 
-
-*** =hint
+`@hint`
 - Anna esimeses ülesandes funktsiooni `order` argumentideks tunnused `Sepal.Width`, `Sepal.Length` ja `Petal.Width` (selles järjekorrras).
 - Andmestiku lõpu vaatamiseks kasuta  näiteks funktsiooni `tail`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # vaata andmestikku
 head(iris)
@@ -166,7 +170,7 @@ eelviimane <- "_______"
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # vaata andmestikku
 head(iris)
@@ -180,7 +184,7 @@ eelviimane <- "setosa"
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # 1
 test_function(name = "order", 
@@ -212,32 +216,34 @@ success_msg("Hästi!")
 
 ```
 
+---
 
+## Andmestiku sorteerimine
 
-
-
---- type:NormalExercise lang:r xp:100 skills:1 key:90c0772430
-##  Andmestiku sorteerimine 
+```yaml
+type: NormalExercise
+key: 90c0772430
+lang: r
+xp: 100
+skills: 1
+```
 
 Töölaual on andmestik `iris`. Siin ülesandes tuleb kombineerida kasvavalt ja kahanevalt sorteerimist.
 
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Järjesta andmestik `iris`  nii, et vaatlused oleks tunnuse `Sepal.Width` järgi järjestatud kasvavalt ning need vaatlused, mil on kroonlehe laius sama, oleksid tunnuse `Sepal.Length` järgi järjestatud kahanevasse järjestusse. Omista sorteeritud andmestik muutujale `iris.sort2`. 
 - **Ülesanne 3** Mis sorti iiris on sorteeritud andmestikus 30 kohal? Omista selle sordi nimi muutujale `kolmekymnes`.
 
-*** =hint
+`@hint`
 - Kui andmestikku on vaja sorteerida ühe tunnuse järgi kasvavalt ja teise järgi kahanevalt, siis saad `order` käsus lisada miinusmärgi selle tunnuse nime ette, mille järgi tuleb sorteerida kahanevalt (tingimusel, et `decreasing = FALSE`). See abinõu sobib aga ainult siis kui tegu on arvtunnustega!
 - Kolmekümnenda vaatluse nägemiseks: `iris.sort2[30,]`
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # vaata andmestikku
 head(iris)
@@ -250,7 +256,7 @@ kolmekymnes <- "_______"
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # vaata andmestikku
 head(iris)
@@ -263,7 +269,7 @@ kolmekymnes <- "virginica"
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # 1
 test_function(name = "order", 

@@ -1,33 +1,39 @@
 ---
-title       : Faktor-tüüpi tunnus
-description : Faktor-tüüpi tunnuse kasutamine
---- type:NormalExercise lang:r xp:100 skills:1 key:35f7f6fc0f
-## Faktori tasemete järjestamine 
+title: 'Faktor-tüüpi tunnus'
+description: 'Faktor-tüüpi tunnuse kasutamine'
+---
+
+## Faktori tasemete järjestamine
+
+```yaml
+type: NormalExercise
+key: 35f7f6fc0f
+lang: r
+xp: 100
+skills: 1
+```
 
 Töölaual on andmestik `iris`. Andmed on kolme sort iiriste(lilled mitte kommid!) õie mõõtmete kohta. Mõõdetud on õielehtede (kroonlehed - ik *petal*, tupplehed - ik *sepal*) pikkus ja laius sentimeetrites.
 
 
 Vaata kõigepealt käsuga `summary(iris)` andmestiku ülevaadet. Tunnus `Species` näitab iirise sorti.
 
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Käsu `by` abil leia kõigi kolme iirisesordi kroonlehe keskmine pikkus (kroonlehe pikkus `Petal.Length`), omista saadud vastus muutujale `keskmised`, prindi selle väärtus ekraanile.
 - **Ülesanne 2** Millise sordi kroonlehed on keskmiselt kõige lühemad? Omista selle sordi nimi muutujale `kroonlehed1`.
 - **Ülesanne 3** Kasutades `factor` käsku lisa andmestikku tunnus nimega `sordinimi`, mis oleks sama sisuga kui `Species`, kuid mille väärtuste järjekord oleks: `versicolor`, `setosa`, `virginica`.
 - **Ülesanne 4** Kasutades `tapply` käsku leia maksimaalsed kroonlehe pikkused igal sordil, tulemuste järjestus muutujas `maksimumid` olgu järgmine: `versicolor`, `setosa`, `virginica`. Prindi muutuja väärtus ekraanile. Käsu `tapply` kirjapilt `tapply(uuritavtunnus, grupitunnus, funktsioon)`.
 
-
-*** =hint
+`@hint`
 - `by` käsu kirjapilt on järgmine: `by(uuritavtunnus, grupitunnus, funktsioon)`.
 - Faktori tasemete ümberjärjestamiseks kasuta `factor` käsku, andes argumendile `levels` väärtuseks sordinimede vektori nõutud järjestuses.
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 #
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Vaata esmalt andmestikust ülevaadet
 summary(iris)
@@ -51,10 +57,7 @@ maksimumid <- tapply(____________)
 maksimumid
 ```
 
-
-
-
-*** =solution
+`@solution`
 ```{r}
 # Vaata esmalt andmestikust ülevaadet
 summary(iris)
@@ -78,7 +81,7 @@ maksimumid <- tapply(iris$Petal.Length, iris$sordinimi, max)
 maksimumid
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # 1
 test_function(name = "by",
@@ -154,59 +157,39 @@ success_msg("Tubli! Esimesed ülesanded on tehtud.")
 
 ```
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---- type:NormalExercise lang:r xp:100 skills:1 key:4229ba4b81
 ## Faktor-tunnuse loomine arvtunnusest
 
+```yaml
+type: NormalExercise
+key: 4229ba4b81
+lang: r
+xp: 100
+skills: 1
+```
 
 Töölaual on andmestik `iris`. Andmed on kolme sort iiriste(lilled mitte kommid!) õie mõõtmete kohta. Mõõdetud on õielehtede (kroonlehed - ik *petal*, tupplehed - ik *sepal*) pikkus ja laius sentimeetrites.
 
 
-Kui arvtunnuse väärtused on vaja jagada intervallidesse, siis saab kasutada käsku `cut`. Loodav tunnus on faktor-tüüpi. 
+Kui arvtunnuse väärtused on vaja jagada intervallidesse, siis saab kasutada käsku `cut`. Loodav tunnus on faktor-tüüpi.
 
- 
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Jaga kroonlehtede pikkuse tunnus `Petal.Length` intervallidesse, selleks tekita töölauale vektor `intervallid`. Intervallid olgu pikkusega 0.5 sentimeetrit ja kujul: `[1, 1.5)`, `[1.5, 2)` jne kuni `[6.7, 7)`. Ära tekkivate faktoritasemete silte muuda.
 - **Ülesanne 2** Kontrolli, kas vektor `intervallid` on ikka faktor-tüüpi. Pane kirja, mis funktsiooniga saab faktor-tüübile vastavust kontrollida.
 - **Ülesanne 3** Leia tekitatud vektori sagedustabel. Omista see muutujale `sagedustabel` ja prindi ekraanile.
 - **Ülesanne 4** Vaata sagedustabelist mitu intervalli jäi tühjaks? Omista tühjade intervallide arv muutujale `tyhjad`.
 
-
-*** =hint
+`@hint`
 - Vaata `cut` käsu abifaili, loe milleks saab kasutada argumenti `right`.
 - Ära määra `cut` käsus argumenti `labels`.
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 #pole
 ```
 
-
-
-*** =sample_code
+`@sample_code`
 ```{r}
 # Vaata esmalt andmestikust ülevaadet
 summary(iris)
@@ -230,9 +213,7 @@ tyhjad <- __
 
 ```
 
-
-
-*** =solution
+`@solution`
 ```{r}
 # Vaata esmalt andmestikust ülevaadet
 summary(iris)
@@ -257,9 +238,7 @@ tyhjad <- 2
 
 ```
 
-
-
-*** =sct
+`@sct`
 ```{r}
 # 1
 test_function(name = "cut",
