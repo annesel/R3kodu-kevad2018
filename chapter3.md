@@ -679,7 +679,7 @@ test_function(name = "recast",
               not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `recast`.",
               args_not_specified_msg = paste("Käsku `recast` läheb " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                               "teiseks argumendiks  `formula`, mille kaudu saab määrata   rea ja veertunnused.")),
+                                               "teiseks argumendiks  `formula`, mille kaudu saab määrata rea- ja veerutunnused.")),
               incorrect_msg =   paste("Käsus `recast` on  ", 
                                       c("vale andmestik",
                                         "`formula` argumendi väärtus vale.")))
