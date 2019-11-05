@@ -127,6 +127,7 @@ test_data_frame("iris", columns = c("sordinimi"),
 
 
 
+
 # 4
 test_function(name = "tapply",
               args = c("X", "INDEX", "FUN"),
