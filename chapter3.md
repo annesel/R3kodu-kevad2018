@@ -522,7 +522,7 @@ Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mit
 
 `@instructions`
 - **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Vii andmestik esmalt pikale kujule käsuga `melt`. ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu argumente täpsusta. Prindi tulemus ekraanile.
+- **Ülesanne 2** Vii andmestik esmalt pikale kujule käsuga `melt`. ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu `melt` argumente täpsusta. Prindi tulemus ekraanile.
 - **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate arstiabiliikide kohta. Vaata tulemust.
 
 `@hint`
@@ -593,7 +593,7 @@ test_function(name = "dcast",
               not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `dcast`.",
               args_not_specified_msg = paste("Käsku `dcast` läheb " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                               "üheks argumendiks  `formula` ehk valem mille kaudu saab määrata rea ja veertunnused.")),
+                                               "teiseks argumendiks  `formula` ehk valem, mille kaudu saab määrata rea ja veertunnused.")),
               incorrect_msg =   paste("Käsus `dcast` on  ", 
                                       c("vale andmestik",
                                         "`formula` argumendi väärtus vale.")))
