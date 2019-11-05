@@ -334,9 +334,9 @@ test_function(name = "dcast",
               index = 1,
               eq_condition = "equivalent",
               not_called_msg = "Teises ülesandes pead kasutama funktsiooni `dcast`.",
-              args_not_specified_msg = paste("Käsku `dcast` läheb " , 
+              args_not_specified_msg = paste("Käsus `dcast` on " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                               " üheks argumendiks  `formula`, valem mille kaudu saab määrata nö rea ja veertunnused."
+                                               " vaja lisada argument  `formula`, valem mille kaudu saab määrata nö rea ja veertunnused."
                                                #," üheks argumendiks  `fun.aggregate`, mille kaudu saab määrata funktsiooni mille tulemus lahtrites esitada."
                                                )),
               incorrect_msg =   paste("Käsus `dcast` on  ", 
@@ -383,7 +383,7 @@ skills: 1
 Töölaual on sama andmestik `rotid`.  Pakett `reshape2` on juba aktiveeritud.
 
 `@instructions`
-- **Ülesanne 1** Kasutades funktsiooni `dcast` leia tabel, kus rotid on grupeeritud vastavalt dieedile ja igale rotile on leitud tema kaalude mediaan. Kaalu mediaani veerule määra nimeks `"kaalu mediaan"`. Omista saadud tabel muutujale `tabel3`, prindi see eraanile.
+- **Ülesanne 1** Kasutades funktsiooni `dcast` leia tabel, kus rotid on grupeeritud vastavalt dieedile ja igale rotile on leitud tema kaalude mediaan. Kaalu mediaani veerule määra nimeks `"kaalu mediaan"`. Omista saadud tabel muutujale `tabel3`, prindi see ekraanile.
 - **Ülesanne 2** Omista muutujale `rott2mediaan` roti `no.02` kaalu mediaani väärtus.
 
 `@hint`
@@ -444,11 +444,11 @@ test_function(name = "dcast",
               index = 1,
               eq_condition = "equal",
               not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `dcast`.",
-              args_not_specified_msg = paste("Käsku `dcast` läheb " , 
+              args_not_specified_msg = paste("Käsus `dcast` on " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                               " üheks argumendiks  `formula`, valem, mille kaudu saab määrata rea ja veertunnused.",
-                                               " üheks argumendiks  `fun.aggregate`, selle kaudu saab määrata funktsiooni, mille tulemus lahtrites esitada.",
-                                               " seekord vaja ka argumenti `value.var`.")),
+                                               " vaja lisada argument `formula`, valem, mille kaudu saab määrata rea ja veerutunnused.",
+                                               " vaja lisada argument `fun.aggregate`, selle kaudu saab määrata funktsiooni, mille tulemus lahtrites esitada.",
+                                               " seekord vaja ka täpsustada argumendi `value.var` väärtus.")),
               incorrect_msg =   paste("Käsus `dcast` on  ", 
                                       c("vale andmestik",
                                         "`formula` argumendi väärtus vale. Tabelis võiks reas esimene väärtus olla dieedi number, teine roti number ja kolmas leitud mediaan veerus `kaalu mediaan`", 
@@ -464,7 +464,7 @@ test_data_frame("tabel3", columns = "kaalu mediaan",
             incorrect_msg = "Andmetabeli `tabel3  veeru `kaalu mediaan` väärtus ei ole korrektne. Proovi uuesti." )
 
 
-test_output_contains("tabel3", incorrect_msg = "`dcast` funtksiooni tulemus `tabel3` on ekraanile printimata.")
+test_output_contains("tabel3", incorrect_msg = "`dcast` funktsiooni tulemus `tabel3` on ekraanile printimata.")
 
 
 
