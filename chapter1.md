@@ -13,14 +13,14 @@ xp: 100
 skills: 1
 ```
 
-Töölaual on andmestik `iris`. Andmed on kolme sort iiriste(lilled mitte kommid!) õie mõõtmete kohta. Mõõdetud on õielehtede (kroonlehed - ik *petal*, tupplehed - ik *sepal*) pikkus ja laius sentimeetrites.
+Töölaual on andmestik `iris`. Andmed on kolme sorti iiriste(lilled mitte kommid!) õie mõõtmete kohta. Mõõdetud on õielehtede (kroonlehed - ik *petal*, tupplehed - ik *sepal*) pikkus ja laius sentimeetrites.
 
 
 Vaata kõigepealt käsuga `summary(iris)` andmestiku ülevaadet. Tunnus `Species` näitab iirise sorti.
 
 `@instructions`
 - **Ülesanne 1** Käsu `by` abil leia kõigi kolme iirisesordi kroonlehe keskmine pikkus (kroonlehe pikkus `Petal.Length`), omista saadud vastus muutujale `keskmised`, prindi selle väärtus ekraanile.
-- **Ülesanne 2** Millise sordi kroonlehed on keskmiselt kõige lühemad? Omista selle sordi nimi muutujale `kroonlehed1`.
+- **Ülesanne 2** Millise sordi kroonlehed on keskmiselt kõige lühemad? Omista selle sordi nimi muutujale `kroonlehed1`. Kasuta sordinime kirjutamisel väikseid tähti.
 - **Ülesanne 3** Kasutades `factor` käsku lisa andmestikku tunnus nimega `sordinimi`, mis oleks sama sisuga kui `Species`, kuid mille väärtuste järjekord oleks: `versicolor`, `setosa`, `virginica`.
 - **Ülesanne 4** Kasutades `tapply` käsku leia maksimaalsed kroonlehe pikkused igal sordil, tulemuste järjestus muutujas `maksimumid` olgu järgmine: `versicolor`, `setosa`, `virginica`. Prindi muutuja väärtus ekraanile. Käsu `tapply` kirjapilt `tapply(uuritavtunnus, grupitunnus, funktsioon)`.
 
@@ -90,7 +90,7 @@ test_function(name = "by",
              eq_condition = "equivalent",
              not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `by`.",
              args_not_specified_msg = paste("Käsus `by` on vaja ", 
-             c("esimeseks argumendiks panna uuritav tunnus", 
+             c("esimeseks argumendiks panna uuritav  arvuline tunnus", 
              "teiseks argumendiks vaja määrata grupeeriv tunnus", 
              "kolmandaks argumendiks panna selle funktsiooni nimi, mida tahame uuritavale tunnusele rakendada")),
              incorrect_msg = paste("Käsus `by` on praegu ", 
@@ -121,9 +121,9 @@ test_function(name = "factor",
 
 
 test_data_frame("iris", columns = c("sordinimi"),
-                undefined_msg = "Ära kustuta andmstikku `iris`!",
+                undefined_msg = "Ära kustuta andmestikku `iris`!",
                 undefined_cols_msg = "Kas oled andmestikku `iris` lisanud veeru `sordinimi`?",
-                incorrect_msg = "Kas oled uue faktori `sordinimi` õigesti väärtustanud ?")
+                incorrect_msg = "Kas oled uue faktori `sordinimi` õigesti väärtustanud? Kasuta sordinimede kirjutamisel väikseid tähti.")
 
 
 
@@ -134,7 +134,7 @@ test_function(name = "tapply",
              eq_condition = "equal",
              not_called_msg = "Viimases ülesandes pead kasutama funktsiooni `tapply`.",
              args_not_specified_msg = paste("Käsus `tapply` on vaja ", 
-             c("esimeseks argumendiks panna uuritav tunnus", 
+             c("esimeseks argumendiks panna uuritav arvuline tunnus", 
              "teiseks argumendiks vaja määrata grupeeriv tunnus",
              "kolmandaks argumendiks panna selle funktsiooni nimi, mida tahame uuritavale tunnusele rakendada")),
              incorrect_msg = paste("Käsus `tapply` on praegu ", 
