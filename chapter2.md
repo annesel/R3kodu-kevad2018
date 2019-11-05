@@ -108,12 +108,12 @@ test_predefined_objects("xy",
 
 test_object("xy1", 
             undefined_msg = "Muutuja  `xy1` on defineerimata.",
-            incorrect_msg = "Andmestik  `xy1`  ei ole korrektne. Proovi uuesti." )
+            incorrect_msg = "Andmestik  `xy1`  ei vasta nõutule. Proovi uuesti. Ridade järjekorra määramiseks kasuta käsku `order(x, y)`" )
 
 
 test_object("xy2", 
             undefined_msg = "Muutuja  `xy2` on defineerimata.",
-            incorrect_msg = "Andmestik  `xy2`   ei ole korrektne. Proovi uuesti." )
+            incorrect_msg = "Andmestik  `xy2`  ei vasta nõutule. Proovi uuesti. Ridade järjekorra määramiseks kasuta käsku `order(x, -y)`")
 
 
 
