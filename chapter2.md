@@ -125,7 +125,7 @@ test_function(name = "order",
 
 
 #
-success_msg("Tubli!")
+success_msg("Tubli! Sorteerisid andmestiku õigesti. Esimesel juhul sorteeriti read nii `x` kui `y` järgi kasvavalt. Teisel juhul aga sorteeriti `x` järgi kasvavalt ja `y` järgi kahanevas järjekorras.")
 
 ```
 
