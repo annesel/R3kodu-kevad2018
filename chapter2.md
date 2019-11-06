@@ -25,12 +25,12 @@ kus elemendid on esmalt järjestatud `x` järgi, kui mingid `x` väärtused lang
 Töölaual on vektorid `x` ja `y` ning andmestik `xy`.
 
 `@instructions`
-- **Ülesanne 1:** Sorteeri andmestik `xy` kasvavalt `x` ja `y` järgi, kasuta selleks `order` käsku. Omista sorteeritud andmestik muuutujale `xy1`, prindi ekraanile.
+- **Ülesanne 1:** Sorteeri andmestik `xy` kasvavalt `x` ja `y` järgi, kasuta selleks `order` käsku. Omista sorteeritud andmestik muutujale `xy1`, prindi ekraanile.
 - **Ülesanne 2:** Moodusta andmestik `xy2`, selleks anna andmestikule `xy` ridade järjestus ette käsuga `order(x, -y)`. Prindi tulemus ekraanile.
 - **Ülesanne 3:** Võrdle kahte tulemust, milles seisneb erinevus?
 
 `@hint`
-- Andmestiku sorteerimiseks määra `order` käsu tulemuse abil andmestiku ridade järejstus: `andmestik[order(x, y),]`.
+- Andmestiku sorteerimiseks määra `order` käsu tulemuse abil andmestiku ridade järjestus: `andmestik[order(x, y),]`.
 
 `@pre_exercise_code`
 ```{r}

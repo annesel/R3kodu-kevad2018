@@ -17,7 +17,7 @@ Töölaual on olemas andmestik `B`. Andmestikus on 160 inimese kohta mitmete tes
 
 `@instructions`
 - **Ülesanne 1:** Aktiveeri pakett `reshape2`.
-- **Ülesanne 2:** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifiakaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
+- **Ülesanne 2:** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifikaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
 - **Ülesanne 3:** Vaata uue andmestiku struktuuri käsuga `str`.
 
 `@hint`
@@ -250,7 +250,7 @@ Töölaual on sama andmestik `rotid`.  Pakett `reshape2` on juba aktiveeritud
 
 `@hint`
 - Käsus `dcast` käsus saad arvutatavale veerule nime panemiseks käsu argumendi `formula` kirja panna nii `reatunnus1 + reatunnus2 ~ "uustunnus"`.
-- Kui rea- ja veertunnuste valem on selline, et ühte lahtrisse peaks minema mitu väärtust, siis vaikimisi leitakse nende väärtuste arv ja esitatakse tabelis st `fun.aggregate` väärtuseks on vaikimisi vektori pikkuse leidmise funktsioon. Seda siin ülesandes peaksi kasutama.
+- Kui rea- ja veertunnuste valem on selline, et ühte lahtrisse peaks minema mitu väärtust, siis vaikimisi leitakse nende väärtuste arv ja esitatakse tabelis st `fun.aggregate` väärtuseks on vaikimisi vektori pikkuse leidmise funktsioon. Seda siin ülesandes peakski kasutama.
 
 `@pre_exercise_code`
 ```{r}
@@ -278,7 +278,7 @@ tabel1 <- ________________
 tabel1
 
 
-# ÜLesanne 2: Leia samad näitajad käsu dcast abil
+# Ülesanne 2: Leia samad näitajad käsu dcast abil
 tabel2 <- dcast(_______________________)
 tabel2
 
@@ -298,7 +298,7 @@ tabel1 <- table(rotid$Rat)
 tabel1
 
 
-# ÜLesanne 2: Leia samad näitajad käsu dcast abil
+# Ülesanne 2: Leia samad näitajad käsu dcast abil
 tabel2 <- dcast(rotid, Rat ~ "mootmisi")
 tabel2
 
@@ -506,7 +506,8 @@ Näiteks kui on tegu tabeliga, kus on kirjas keskmine brutotunnitasu (eurot) van
 |40-49	|	4,94 |	6,01 |
 |50-59	|	4,35 |	5,16 |
 |60 ja vanemad|		4,00| 	4,72 |
-\
+<br>
+
 
 Siis pööratud tabelis oleks aastad ridadeks ja vanusgrupid veergudeks:
 
@@ -515,17 +516,19 @@ Siis pööratud tabelis oleks aastad ridadeks ja vanusgrupid veergudeks:
 |-----|--------|-------|--------|-------|-------------|
 |2010	|4,55 |	5,49| 	4,94|	4,35| 4,00 |
 |2014	|5,40 |	6,52|	6,01|   5,16| 4,72 |
+<br>
 
-\
 
-Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on antud tabeli pööramine.
+
+Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arstiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on antud tabeli pööramine.
 
 `@instructions`
 - **Ülesanne 1:** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2:** Vii andmestik esmalt pikale kujule käsuga `melt`. ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu `melt` argumente täpsusta. Prindi tulemus ekraanile.
+- **Ülesanne 2:** Vii andmestik esmalt pikale kujule käsuga `melt`. Ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu `melt` argumente täpsusta. Prindi tulemus ekraanile.
 - **Ülesanne 3:** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate arstiabiliikide kohta. Vaata tulemust.
 
 `@hint`
+- Käsus `melt` määra argumendi `variable.name`  väärtuseks  `"Aasta"`.
 - Käsus `dcast` peaks ridade-veergude valem olema kujul `Aasta ~ Arstiabiliik`.
 
 `@pre_exercise_code`
@@ -627,7 +630,7 @@ skills: 1
 
 Eelmises ülesandes vaadatud tabeli pööramise, mis oli läbi viidud kahe sammuna: esmalt tabel pikale kujule käsuga `melt` ja siis laiale kujule käsuga `dcast`, saab läbi viia ka ühe käsuga. Käsk `recast` võimaldab kombineerida järjestikused pikk -> lai teisendused.  Enne ülesande lahendamist vaata käsu abilehte `?recast`.
  
-Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste protsendid (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on jälle antud tabeli pööramine, aga nüüd ühe käsu abil.
+Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arstiabi mittesaanud inimeste protsendid (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on jälle antud tabeli pööramine, aga nüüd ühe käsu abil.
 
 `@instructions`
 - **Ülesanne 1:** Prindi ekraanile andmestik `arstiabita`.
