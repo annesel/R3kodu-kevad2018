@@ -15,9 +15,9 @@ skills: 1
 
 Ühe vektori väärtuste sorteerimiseks saab kasutada käsku `sort`, käsk annab tulemuseks järjestatud väärtused.
 
-Käsk `order` annab väljundiks sorteerimisreegli: kuhu peaksime vastavate indeksitega elemendid vektoris/andmetabelis ümber tõstma, et saada kasvavas(kahanevas) järjestuses tulemus. 
+Käsk `order` annab väljundiks sorteerimisreegli: kuhu peaksime vastavate indeksitega elemendid vektoris/read andmetabelis ümber tõstma, et saada kasvavas (kahanevas) järjestuses tulemus. 
 
-Käsule `order` saab argumendiks anda rohkem kui ühe vektori, oluline on siis vektorite järjekord käsus.  Näiteks `order(x, y, z)` annab sellise indeksite järjekorra
+Käsule `order` saab argumendiks anda rohkem kui ühe vektori, oluline on siis vektorite järjekord käsus.  Näiteks `order(x, y, z)` annab sellise indeksite järjekorra, 
 kus elemendid on esmalt järjestatud `x` järgi, kui mingid `x` väärtused langevad kokku, siis nende järjestus määratakse `y` väärtuste põhjal, kui kokkulangevate `x` väärtuste korral esineb ka võrdseid `y` väärtuseid, siis nende järjestus määratakse `z` põhjal.
 
 
@@ -25,9 +25,9 @@ kus elemendid on esmalt järjestatud `x` järgi, kui mingid `x` väärtused lang
 Töölaual on vektorid `x` ja `y` ning andmestik `xy`.
 
 `@instructions`
-- **Ülesanne 1** Sorteeri andmestik `xy` kasvavalt `x` ja `y` järgi, kasuta selleks `order` käsku. Omista sorteeritud andmestik muuutujale `xy1`, prindi ekraanile.
-- **Ülesanne 2** Moodusta andmestik `xy2`, selleks anna andmestikule `xy` ridade järjestus ette käsuga `order(x, -y)`. Prindi tulemus ekraanile.
-- **Ülesanne 3** Võrdle kahte tulemust, milles seisneb erinevus?
+- **Ülesanne 1:** Sorteeri andmestik `xy` kasvavalt `x` ja `y` järgi, kasuta selleks `order` käsku. Omista sorteeritud andmestik muuutujale `xy1`, prindi ekraanile.
+- **Ülesanne 2:** Moodusta andmestik `xy2`, selleks anna andmestikule `xy` ridade järjestus ette käsuga `order(x, -y)`. Prindi tulemus ekraanile.
+- **Ülesanne 3:** Võrdle kahte tulemust, milles seisneb erinevus?
 
 `@hint`
 - Andmestiku sorteerimiseks määra `order` käsu tulemuse abil andmestiku ridade järejstus: `andmestik[order(x, y),]`.
@@ -144,8 +144,8 @@ skills: 1
 Töölaual on andmestik `iris`. Andmestik tuleb erinevate tunnuste järgi kasvavalt sorteerida.
 
 `@instructions`
-- **Ülesanne 1** Järjesta andmestik `iris` kasvavasse järjestusse tunnuste `Sepal.Width`, `Sepal.Length` ja `Petal.Width` järgi.  Omista tulemus muutujale `iris.sort1`.
-- **Ülesanne 2** Mis sorti iiris on eelviimasel kohal? Omista sordi nimi muuutujale `eelviimane`.
+- **Ülesanne 1:** Järjesta andmestik `iris` kasvavasse järjestusse tunnuste `Sepal.Width`, `Sepal.Length` ja `Petal.Width` järgi.  Omista tulemus muutujale `iris.sort1`.
+- **Ülesanne 2:** Mis sorti iiris on eelviimasel kohal? Omista sordi nimi muuutujale `eelviimane`.
 
 `@hint`
 - Anna esimeses ülesandes funktsiooni `order` argumentideks tunnused `Sepal.Width`, `Sepal.Length` ja `Petal.Width` (selles järjekorrras).
@@ -231,8 +231,8 @@ skills: 1
 Töölaual on andmestik `iris`. Siin ülesandes tuleb kombineerida kasvavalt ja kahanevalt sorteerimist.
 
 `@instructions`
-- **Ülesanne 1** Järjesta andmestik `iris`  nii, et vaatlused oleks tunnuse `Sepal.Width` järgi järjestatud kasvavalt ning need vaatlused, mil on kroonlehe laius sama, oleksid tunnuse `Sepal.Length` järgi järjestatud kahanevasse järjestusse. Omista sorteeritud andmestik muutujale `iris.sort2`. 
-- **Ülesanne 3** Mis sorti iiris on sorteeritud andmestikus 30 kohal? Omista selle sordi nimi muutujale `kolmekymnes`.
+- **Ülesanne 1:** Järjesta andmestik `iris`  nii, et vaatlused oleks tunnuse `Sepal.Width` järgi järjestatud kasvavalt ning need vaatlused, mil on kroonlehe laius sama, oleksid tunnuse `Sepal.Length` järgi järjestatud kahanevasse järjestusse. Omista sorteeritud andmestik muutujale `iris.sort2`. 
+- **Ülesanne 3:** Mis sorti iiris on sorteeritud andmestikus 30 kohal? Omista selle sordi nimi muutujale `kolmekymnes`.
 
 `@hint`
 - Kui andmestikku on vaja sorteerida ühe tunnuse järgi kasvavalt ja teise järgi kahanevalt, siis saad `order` käsus lisada miinusmärgi selle tunnuse nime ette, mille järgi tuleb sorteerida kahanevalt (tingimusel, et `decreasing = FALSE`). See abinõu sobib aga ainult siis kui tegu on arvtunnustega!

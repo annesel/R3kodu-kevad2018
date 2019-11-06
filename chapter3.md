@@ -16,9 +16,9 @@ skills: 1
 Töölaual on olemas andmestik `B`. Andmestikus on 160 inimese kohta mitmete testide (40 testi) tulemused.
 
 `@instructions`
-- **Ülesanne 1** Aktiveeri pakett `reshape2`.
-- **Ülesanne 2** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifiakaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
-- **Ülesanne 3** Vaata uue andmestiku struktuuri käsuga `str`.
+- **Ülesanne 1:** Aktiveeri pakett `reshape2`.
+- **Ülesanne 2:** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifiakaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
+- **Ülesanne 3:** Vaata uue andmestiku struktuuri käsuga `str`.
 
 `@hint`
 - Käsus `melt` määra argumentide `measure.vars` ja  `id.vars` väärtus. `id.vars` on need tunnused, mida me andmestiku kuju muutes ümberpaigutada ei taha.
@@ -132,9 +132,9 @@ skills: 1
 Töölaual on andmestik `rotid`. Rotid on jagatud 3 gruppi, iga grupp sai erinevat toitu (`Diet`). Sööda mõju uurimiseks kaaluti rotid korduvalt, mõõtmisajad on kirjas tunnuses `Time` (aeg päevades katse algusest) kaal grammides on toodud veerus `weight`.
 
 `@instructions`
-- **Ülesanne 1** Aktiveeri pakett `reshape2`.
-- **Ülesanne 2** Kasutades käsku `dcast` vii andmestik `rotid` sellisele kujule, et iga roti kaalumõõtmised oleksid ühes reas, koos roti identifikaatori(`Rat`) ja söödatüübiga (`Diet`). Omista uus andmestik muutujale `rotid.lai`. 
-- **Ülesanne 3** Prindi uus andmestik ekraanile. Pane tähele, et tabelis on tühikuväärtused `NA`.
+- **Ülesanne 1:** Aktiveeri pakett `reshape2`.
+- **Ülesanne 2:** Kasutades käsku `dcast` vii andmestik `rotid` sellisele kujule, et iga roti kaalumõõtmised oleksid ühes reas, koos roti identifikaatori(`Rat`) ja söödatüübiga (`Diet`). Omista uus andmestik muutujale `rotid.lai`. 
+- **Ülesanne 3:** Prindi uus andmestik ekraanile. Pane tähele, et tabelis on tühikuväärtused `NA`.
 
 `@hint`
 - Käsus `dcast` on argument `value.var`, mille abil saab ette anda selle tunnuse nime, mille väärtuseid kasutatakse ridade täitmisel.
@@ -244,12 +244,12 @@ skills: 1
 Töölaual on sama andmestik `rotid`.  Pakett `reshape2` on juba aktiveeritud
 
 `@instructions`
-- **Ülesanne 1** Mitu korda on iga rotti kaalutud? Leia sagedustabel tunnusele `rotid$Rat`, omista tabel muutujale `tabel1`, prindi see ekraanile.
-- **Ülesanne 2** Kasutades funktsiooni `dcast` leia samad näitajad andmetabelisse st teisenda andmestikku `rotid` nii, et  tulemuseks olevas andmetabelis oleks ühes veerus rottide indikaatorid ja teises igal rotil tehtud mõõtmiste arv (selle veeru nimi olgu `"mootmisi"`). Omista saadud tulemus muutujale `tabel2`, prindi see ekraanile.
-- **Ülesanne 3** Mitu rotti on enne katse lõppu katkestanud, st mitmel pole kõiki 11 mõõtmist? Omista nende rottide arv muutujale `katkestajaid`.
+- **Ülesanne 1:** Mitu korda on iga rotti kaalutud? Leia sagedustabel tunnusele `rotid$Rat`, omista tabel muutujale `tabel1`, prindi see ekraanile.
+- **Ülesanne 2:** Kasutades funktsiooni `dcast` leia samad näitajad andmetabelisse st teisenda andmestikku `rotid` nii, et  tulemuseks olevas andmetabelis oleks ühes veerus rottide indikaatorid ja teises igal rotil tehtud mõõtmiste arv (selle veeru nimi olgu `"mootmisi"`). Omista saadud tulemus muutujale `tabel2`, prindi see ekraanile.
+- **Ülesanne 3:** Mitu rotti on enne katse lõppu katkestanud, st mitmel pole kõiki 11 mõõtmist? Omista nende rottide arv muutujale `katkestajaid`.
 
 `@hint`
-- Käsus `dcast` käsus saad arvutatavale veerule nime panemiseks käsu argumendi `formula` kirja panna nii `reatunus1 + reatunnus2 ~ "uustunnus"`.
+- Käsus `dcast` käsus saad arvutatavale veerule nime panemiseks käsu argumendi `formula` kirja panna nii `reatunnus1 + reatunnus2 ~ "uustunnus"`.
 - Kui rea- ja veertunnuste valem on selline, et ühte lahtrisse peaks minema mitu väärtust, siis vaikimisi leitakse nende väärtuste arv ja esitatakse tabelis st `fun.aggregate` väärtuseks on vaikimisi vektori pikkuse leidmise funktsioon. Seda siin ülesandes peaksi kasutama.
 
 `@pre_exercise_code`
@@ -383,8 +383,8 @@ skills: 1
 Töölaual on sama andmestik `rotid`.  Pakett `reshape2` on juba aktiveeritud.
 
 `@instructions`
-- **Ülesanne 1** Kasutades funktsiooni `dcast` leia tabel, kus rotid on grupeeritud vastavalt dieedile ja igale rotile on leitud tema kaalude mediaan. Kaalu mediaani veerule määra nimeks `"kaalu mediaan"`. Omista saadud tabel muutujale `tabel3`, prindi see ekraanile.
-- **Ülesanne 2** Omista muutujale `rott2mediaan` roti `no.02` kaalu mediaani väärtus.
+- **Ülesanne 1:** Kasutades funktsiooni `dcast` leia tabel, kus rotid on grupeeritud vastavalt dieedile ja igale rotile on leitud tema kaalude mediaan. Kaalu mediaani veerule määra nimeks `"kaalu mediaan"`. Omista saadud tabel muutujale `tabel3`, prindi see ekraanile.
+- **Ülesanne 2:** Omista muutujale `rott2mediaan` roti `no.02` kaalu mediaani väärtus.
 
 `@hint`
 - Käsus `dcast` käsus saad arvutatavale veerule nime panemiseks käsu argumendi `formula` kirja panna nii `reatunus1 + reatunnus2 ~ "uustunnus"`.
@@ -521,9 +521,9 @@ Siis pööratud tabelis oleks aastad ridadeks ja vanusgrupid veergudeks:
 Töölaual on tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste osakaalud (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on antud tabeli pööramine.
 
 `@instructions`
-- **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Vii andmestik esmalt pikale kujule käsuga `melt`. ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu `melt` argumente täpsusta. Prindi tulemus ekraanile.
-- **Ülesanne 3** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate arstiabiliikide kohta. Vaata tulemust.
+- **Ülesanne 1:** Prindi ekraanile andmestik `arstiabita`.
+- **Ülesanne 2:** Vii andmestik esmalt pikale kujule käsuga `melt`. ühte veergu peaks minema kõik tabelis olevad protsendid. Tunnusele, mis hakkab sisaldama vanu veerunimesid (ehk aastanumbreid) pane nimeks `Aasta`. Ära teisi käsu `melt` argumente täpsusta. Prindi tulemus ekraanile.
+- **Ülesanne 3:** Teisenda pikk andmestik tagasi laiaks, aga nii, et uue andmestiku ridadeks oleks ühe aasta tulemused erinevate arstiabiliikide kohta. Vaata tulemust.
 
 `@hint`
 - Käsus `dcast` peaks ridade-veergude valem olema kujul `Aasta ~ Arstiabiliik`.
@@ -630,8 +630,8 @@ Eelmises ülesandes vaadatud tabeli pööramise, mis oli läbi viidud kahe sammu
 Töölaual on sama tabel nimega  `arstiabita`, kus on kirjas eri aastatel arsiabi mittesaanud inimeste protsendid (Eesti sotsiaaluuringu andmete põhjal). Aktiveeritud on pakett **reshape2**. Ülesandeks on jälle antud tabeli pööramine, aga nüüd ühe käsu abil.
 
 `@instructions`
-- **Ülesanne 1** Prindi ekraanile andmestik `arstiabita`.
-- **Ülesanne 2** Pööra andmestik nagu eelmises ülesandes, aga nüüd käsuga `recast`. Käsus tuleb määrata kaks argumenti. Prindi tulemus ekraanile.
+- **Ülesanne 1:** Prindi ekraanile andmestik `arstiabita`.
+- **Ülesanne 2:** Pööra andmestik nagu eelmises ülesandes, aga nüüd käsuga `recast`. Käsus tuleb määrata kaks argumenti. Prindi tulemus ekraanile.
 
 `@hint`
 - Käsus `recast` on praegu oluline ära määrata teisendatav andmestik ja ridade-veergude valem, ehk argument `formula`. 
