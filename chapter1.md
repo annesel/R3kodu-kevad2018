@@ -19,10 +19,10 @@ Töölaual on andmestik `iris`. Andmed on kolme sorti iiriste(lilled mitte kommi
 Vaata kõigepealt käsuga `summary(iris)` andmestiku ülevaadet. Tunnus `Species` näitab iirise sorti.
 
 `@instructions`
-- **Ülesanne 1** Käsu `by` abil leia kõigi kolme iirisesordi kroonlehe keskmine pikkus (kroonlehe pikkus `Petal.Length`), omista saadud vastus muutujale `keskmised`, prindi selle väärtus ekraanile.
-- **Ülesanne 2** Millise sordi kroonlehed on keskmiselt kõige lühemad? Omista selle sordi nimi muutujale `kroonlehed1`. Kasuta sordinime kirjutamisel väikseid tähti.
-- **Ülesanne 3** Kasutades `factor` käsku lisa andmestikku tunnus nimega `sordinimi`, mis oleks sama sisuga kui `Species`, kuid mille väärtuste järjekord oleks: `versicolor`, `setosa`, `virginica`.
-- **Ülesanne 4** Kasutades `tapply` käsku leia maksimaalsed kroonlehe pikkused igal sordil, tulemuste järjestus muutujas `maksimumid` olgu järgmine: `versicolor`, `setosa`, `virginica`. Prindi muutuja väärtus ekraanile. Käsu `tapply` kirjapilt `tapply(uuritavtunnus, grupitunnus, funktsioon)`.
+- **Ülesanne 1:** Käsu `by` abil leia kõigi kolme iirisesordi kroonlehe keskmine pikkus (kroonlehe pikkus `Petal.Length`), omista saadud vastus muutujale `keskmised`, prindi selle väärtus ekraanile.
+- **Ülesanne 2:** Millise sordi kroonlehed on keskmiselt kõige lühemad? Omista selle sordi nimi muutujale `kroonlehed1`. Kasuta sordinime kirjutamisel väikseid tähti.
+- **Ülesanne 3:** Kasutades `factor` käsku lisa andmestikku tunnus nimega `sordinimi`, mis oleks sama sisuga kui `Species`, kuid mille väärtuste järjekord oleks: `versicolor`, `setosa`, `virginica`.
+- **Ülesanne 4:** Kasutades `tapply` käsku leia maksimaalsed kroonlehe pikkused igal sordil, tulemuste järjestus muutujas `maksimumid` olgu järgmine: `versicolor`, `setosa`, `virginica`. Prindi muutuja väärtus ekraanile. Käsu `tapply` kirjapilt `tapply(uuritavtunnus, grupitunnus, funktsioon)`.
 
 `@hint`
 - `by` käsu kirjapilt on järgmine: `by(uuritavtunnus, grupitunnus, funktsioon)`.
@@ -176,10 +176,10 @@ Töölaual on andmestik `iris`. Andmed on kolme sort iiriste(lilled mitte kommid
 Kui arvtunnuse väärtused on vaja jagada intervallidesse, siis saab kasutada käsku `cut`. Loodav tunnus on faktor-tüüpi.
 
 `@instructions`
-- **Ülesanne 1** Jaga kroonlehtede pikkuse tunnus `Petal.Length` intervallidesse, selleks tekita töölauale vektor `intervallid`. Intervallid olgu pikkusega 0.5 sentimeetrit ja kujul: `[1, 1.5)`, `[1.5, 2)` jne kuni `[6.7, 7)`. Ära tekkivate faktoritasemete silte muuda.
-- **Ülesanne 2** Kontrolli, kas vektor `intervallid` on ikka faktor-tüüpi. Pane kirja, mis funktsiooniga saab faktor-tüübile vastavust kontrollida.
-- **Ülesanne 3** Leia tekitatud vektori sagedustabel. Omista see muutujale `sagedustabel` ja prindi ekraanile.
-- **Ülesanne 4** Vaata sagedustabelist mitu intervalli jäi tühjaks? Omista tühjade intervallide arv muutujale `tyhjad`.
+- **Ülesanne 1:** Jaga kroonlehtede pikkuse tunnus `Petal.Length` intervallidesse, selleks tekita töölauale vektor `intervallid`. Intervallid olgu pikkusega 0,5 sentimeetrit ja kujul: `[1, 1.5)`, `[1.5, 2)` jne kuni `[6.7, 7)`. Ära tekkivate faktortasemete silte muuda.
+- **Ülesanne 2:** Kontrolli, kas vektor `intervallid` on ikka faktor-tüüpi. Pane kirja, mis funktsiooniga saab faktor-tüübile vastavust kontrollida.
+- **Ülesanne 3:** Leia tekitatud vektori sagedustabel. Omista see muutujale `sagedustabel` ja prindi ekraanile.
+- **Ülesanne 4:** Vaata sagedustabelist mitu intervalli jäi tühjaks? Omista tühjade intervallide arv muutujale `tyhjad`.
 
 `@hint`
 - Vaata `cut` käsu abifaili, loe milleks saab kasutada argumenti `right`.
