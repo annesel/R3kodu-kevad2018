@@ -89,12 +89,12 @@ test_function(name = "melt",
               not_called_msg = "Teises ülesandes pead kasutama funktsiooni `melt`.",
               args_not_specified_msg = paste("Käsus `melt` on " , 
                                              c("esimeseks argumendiks andmestiku nimi",
-                                               " vajalik argument `id.vars`, mille kaudu saab määrata tunnused, mis teisendamisel paika jätta. Tunnusenimed kirjuta siin jutumärkidesse või anna ette sobivad veeruindeksid.", 
+                                               "vajalik argument `id.vars`, mille kaudu saab määrata tunnused, mis teisendamisel paika jätta. Tunnusenimed tuleb kirjutada siin jutumärkidesse või anda ette sobivad veeruindeksid. Antud ülesandes kasuta veeruindeksi etteandmist.", 
                                                " vajalik argument  `measure.vars`, mille kaudu saab määrata tunnused, mille väärtused tõstetakse ühte veergu.")),
-              incorrect_msg =   paste("Käsus `melt` on  " , 
+              incorrect_msg = paste("Käsus `melt` on  " , 
                                       c("vale andmestik",
-                                        "`id.vars` argumendi väärtus vale.", 
-                                        "`measure.vars` argumendi väärtus vale.")))
+                                        "`id.vars` argumendi väärtus vale. Määra selle argumendi väärtus veeruindeksi kaudu.", 
+                                        "`measure.vars` argumendi väärtus vale. Anna ette sobivate veeruindeksite vektor.")))
 
 
 test_object("testid.pikk", 
