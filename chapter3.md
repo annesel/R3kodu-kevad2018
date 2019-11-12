@@ -17,7 +17,7 @@ Töölaual on olemas andmestik `B`. Andmestikus on 160 inimese kohta mitmete tes
 
 `@instructions`
 - **Ülesanne 1:** Aktiveeri pakett `reshape2`.
-- **Ülesanne 2:** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifikaator `id` kuid välja jääma testi tüübi tunnus `grupp`.
+- **Ülesanne 2:** Kasutades käsku `melt` vii andmestik `B` pikale kujule, nii, et iga uuritava kohta tekib andmestikku 40 rida (testitulemused paigutatakse ühte veergu). Nimeta uus andmestik nimega `testid.pikk`. Andmestikus peab säilima inimese identifikaator `id` kuid välja jääma testi tüübi tunnus `grupp`. Kasuta siin ülesandes tunnustele viitamisel veeruindekseid, mitte tunnusenimesid.
 - **Ülesanne 3:** Vaata uue andmestiku struktuuri käsuga `str`.
 
 `@hint`
