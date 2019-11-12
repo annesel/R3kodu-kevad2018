@@ -210,11 +210,11 @@ test_function(name = "dcast",
               args_not_specified_msg = paste("Käsus `dcast` läheb " , 
                                              c("esimeseks argumendiks andmestiku nimi",
                                                " vaja  argumenti `formula`, mille kaudu saab määrata nö rea ja veertunnused.", 
-                                               " vaja  argumenti `value.var`, mille kaudu saab määrata tunnuse, mille väärtusega laia tabeli read täidetakse.")),
+                                               " vaja  argumenti `value.var`, mille kaudu saab määrata tunnuse, mille väärtusega laia tabeli read täidetakse. Anna argumendi väärtuseks selle tunnuse nimi jutumärkides.")),
               incorrect_msg =   paste("Käsus `dcast` on  ", 
                                       c("vale andmestik",
                                         "`formula` argumendi väärtus vale.", 
-                                        "`value.var` argumendi väärtus vale, pane selleks kaalu tunnus.")))
+                                        "`value.var` argumendi väärtus vale, pane selleks kaalu tunnus st selle tunnuse nimi jutumärkides.")))
 
 
 test_object("rotid.lai", 
